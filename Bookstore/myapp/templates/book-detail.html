@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <h2 class="ms-5">DETAILS</h2>
+          <table class="table border border-5">
+            <tr>
+              <th>ID</th>
+              <th>BOOK NAME</th>
+              <th>AUTHOR NAME</th>
+              <th>SELLING PRICE</th>
+            </tr>  
+            <tr>
+              {%for bk in book%}
+              <td>{{bk.id}}</td>
+              <td>{{bk.book_name}}</td>
+              <td>{{bk.author_name}}</td>
+              <td>{{bk.price}}</td>
+              {%endfor%}
+            </tr>
+          </table>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+{%endblock%}

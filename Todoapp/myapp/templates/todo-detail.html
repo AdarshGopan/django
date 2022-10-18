@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <h2 class="ms-5">DETAIL</h2>
+          <table class="table border border-5">
+            <tr>
+              <th>ID</th>
+              <th>TASK NAME</th>
+              <th>USER NAME</th>
+            </tr>  
+            <tr>
+              {%for tod in todo%}
+              <td>{{tod.id}}</td>
+              <td>{{tod.task_name}}</td>
+              <td>{{tod.user}}</td>
+              <!-- <td>{{todo}}</td> -->
+              {%endfor%}
+            </tr>
+          </table>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+{%endblock%}
